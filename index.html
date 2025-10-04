@@ -5,7 +5,8 @@
   <title>Fate Dice Roller</title>
   <meta name="application-name" content="Fate Dice Roller">
   <meta name="description" content="Simple Fate (FUDGE) dice roller PWA app.">
-  <meta name="keywords" content="Fate Dice, FUDGE dice, Fate dice roller, FUDGE roller, PWA dice roller, online dice, dice roller, RPG tool, tabletop RPG, TTRPG, minimalist dice">
+  <meta name="keywords"
+    content="Fate Dice, FUDGE dice, Fate dice roller, FUDGE roller, PWA dice roller, online dice, dice roller, RPG tool, tabletop RPG, TTRPG, minimalist dice">
   <meta name="author" content="Andrei Orlov">
   <meta name="date" content="2025-10-04">
   <meta charset="UTF-8" />
@@ -17,12 +18,12 @@
   <meta name="google" content="nositelinkssearchbox">
   <meta name="referrer" content="no-referrer">
   <meta name="google" content="notranslate">
-  
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maibatsu.github.io/fate-roller">
   <meta property="og:title" content="Fate Dice Roller | PWA">
   <meta property="og:description" content="Simple Fate (FUDGE) dice roller PWA app.">
-  
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,14 +46,14 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('SW registered: ', reg.scope))
-        .catch(err => console.error('SW registration error: ', err));
+          .then(reg => console.log('SW registered: ', reg.scope))
+          .catch(err => console.error('SW registration error: ', err));
       });
     }
-    </script>
+  </script>
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
