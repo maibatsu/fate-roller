@@ -45,12 +45,17 @@ body {
 		opacity: 0.5;
 		transform: scale(0.9);
 		transition: all 0.2s ease-in-out;
+
+		touch-action: manipulation;
+		user-select: none;
 	}
 
 	.fate-icon {
 		width: 90%;
 		height: 90%;
 		display: block;
+		touch-action: manipulation;
+		user-select: none;
 	}
 
 	.die:not(.rolled) {
@@ -68,6 +73,8 @@ body {
 		padding: 0.9375rem 1.875rem;
 		font-size: 1.25rem;
 		cursor: pointer;
+		touch-action: manipulation;
+		user-select: none;
 		background-color: #3f51b5;
 		color: white;
 		border: none;

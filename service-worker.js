@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fate-dice-roller-v1';
+const CACHE_NAME = 'fate-dice-roller-v2';
 const urlsToCache = [
   '/',
   '/index.html',
