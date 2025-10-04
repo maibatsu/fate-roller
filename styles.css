@@ -1,0 +1,84 @@
+:root {
+	font-size: 100%;
+	--main-color: ivory;
+	--accent-color: #36454F;
+	--die-color: lavenderblush;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 100vh;
+	margin: 0;
+
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: var(--main-color);
+	color: var(--accent-color);
+	padding: 1.25rem;
+
+	.dice-container {
+		display: flex;
+		gap: 1.25rem;
+		margin-bottom: 2rem;
+	}
+
+	.die {
+		width: 3.75rem;
+		height: 3.75rem;
+		color: var(--accent-color);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-size: 2.25rem;
+		font-weight: bold;
+
+		background-color: var(--die-color);
+		border: 0.1875rem solid currentColor;
+		border-radius: 0.5rem;
+		box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+
+		opacity: 0.5;
+		transform: scale(0.9);
+		transition: all 0.2s ease-in-out;
+	}
+
+	.fate-icon {
+		width: 90%;
+		height: 90%;
+		display: block;
+	}
+
+	.die:not(.rolled) {
+		font-size: 2.25rem;
+		line-height: 1;
+	}
+
+	.die.rolled {
+		opacity: 1;
+		transform: scale(1);
+		background-color: var(--die-color);
+	}
+
+	#roll-button {
+		padding: 0.9375rem 1.875rem;
+		font-size: 1.25rem;
+		cursor: pointer;
+		background-color: #3f51b5;
+		color: white;
+		border: none;
+		border-radius: 0.5rem;
+		box-shadow: 0 0.25rem #303f9f;
+		transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+	}
+
+	#roll-button:active {
+		background-color: #303f9f;
+		box-shadow: 0 0.125rem #303f9f;
+		transform: translateY(0.125rem);
+	}
+}

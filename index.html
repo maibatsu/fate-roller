@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Fate Dice Roller</title>
+  <meta name="application-name" content="Fate Dice Roller">
+  <meta name="description" content="Simple Fate (FUDGE) dice roller PWA app.">
+  <meta name="keywords" content="Fate Dice, FUDGE dice, Fate dice roller, FUDGE roller, PWA dice roller, online dice, dice roller, RPG tool, tabletop RPG, TTRPG, minimalist dice">
+  <meta name="author" content="Andrei Orlov">
+  <meta name="date" content="2025-10-04">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta name="google" content="nositelinkssearchbox">
+  <meta name="referrer" content="no-referrer">
+  <meta name="google" content="notranslate">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maibatsu.github.io/fate-roller">
+  <meta property="og:title" content="Fate Dice Roller | PWA">
+  <meta property="og:description" content="Simple Fate (FUDGE) dice roller PWA app.">
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fate Dice Roller",
+      "operatingSystem": "Web, Android, iOS",
+      "applicationCategory": "GameApplication",
+      "description": "Simple Fate (FUDGE) dice roller PWA app.",
+      "url": "https://maibatsu.github.io/fate-roller",
+      "dateCreated": "2025-10-04",
+      "inLanguage": "en",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('SW registered: ', reg.scope))
+        .catch(err => console.error('SW registration error: ', err));
+      });
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <div class="dice-container" aria-live="polite" aria-label="Fate dice roll results">
+    <div id="die-1" class="die"></div>
+    <div id="die-2" class="die"></div>
+    <div id="die-3" class="die"></div>
+    <div id="die-4" class="die"></div>
+  </div>
+  <button id="roll-button">Roll your fate</button>
+  <script src="roller.js"></script>
+</body>
+
+</html>
